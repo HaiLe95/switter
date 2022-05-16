@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>SWITTER Feed</title>
+</head>
+<body>
+<a align="center" href="/switt">Add SWITT here!</a>
+<table align="center">
+    <tr>
+        <th>Username</th>
+        <th>Content</th>
+        <th>Hashtag</th>
+    </tr>
+    <tr th:each="note : ${notesList}">
+        <td class="align-middle" th:text="${note.username}">Author:</td>
+        <td class="align-middle" th:text="${note.context}">Content:</td>
+        <td class="align-middle" th:text="${note.hashtag}">Hashtag:</td>
+    </tr>
+</table>
+
+</body>
+</html>

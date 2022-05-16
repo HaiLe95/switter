@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>SWITTER Feed</title>
+</head>
+<body>
+<div align="center">
+    <h1>Add Note</h1>
+    <form action="#" th:action="@{/switt}" method="post" th:object="${note}">
+        <label>Username:</label>
+        <input type="text" th:field="*{username}" /><br/>
+
+        <label>Context:</label>
+        <input type="text" th:field="*{content}" /><br/>
+
+        <label>Hashtag:</label>
+        <input type="text" th:field="*{hashtag}" /><br/>
+
+        <button type="submit">Post</button>
+    </form>
+</div>
+</body>
+</html>
